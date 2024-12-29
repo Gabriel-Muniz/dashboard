@@ -62,3 +62,68 @@ h6 {
 }
 
 /* My code */
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.body {
+  width: inherit;
+  height: inherit;
+  background-color: #1a1a1a;
+
+  display: grid;
+  grid-template-columns: minmax(200px, 250px) minmax(350px, 1fr);
+}
+.sidebar {
+  background-color: #60061e;
+}
+.main-section {
+  display: grid;
+  grid-template-columns: 3fr minmax(300px, 350px);
+  grid-template-rows: minmax(100px, 200px) 50px 2fr;
+  background-color: #02ac1e;
+}
+.header {
+  display: grid;
+  grid-template-columns: 3fr minmax(100px, 2fr);
+
+  background-color: #71771e;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+.header + h1 {
+  grid-column: 1;
+}
+.actions-section {
+  justify-content: space-around;
+}
+.cards-container {
+  grid-row: 3;
+  padding: 20px;
+  background-color: #fed024;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: minmax(200px, 300px);
+  grid-auto-rows: minmax(200px, 300px);
+  gap: 15px;
+
+  justify-content: center;
+}
+.card {
+  background-color: purple;
+  width: 1fr;
+  max-height: 300px;
+}
+.content-sidebar {
+  padding-top: 20px;
+  grid-column: 2;
+  grid-row: 3;
+  background-color: #d3c0d3;
+}
+.annoucements-container {
+  padding: 24px 16px;
+  background-color: #6ab21e;
+}
+.trending-title {
+  padding-top: 24px;
+}
