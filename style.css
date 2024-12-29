@@ -92,12 +92,31 @@ ul {
   display: inline;
   vertical-align: middle;
 }
+.user-pfp,
+.header-icon,
+.logo-container > img,
+.nav-icon > img {
+  display: inline-block;
+  width: 32px;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .logo-container > img,
 .nav-icon > img {
   -webkit-filter: invert(100%);
   filter: invert(100%);
-  display: inline-block;
-  width: 32px;
+}
+input {
+  background-color: #34d399;
+  border: none;
+  border-radius: 50px;
+  height: 80%;
+  width: clamp(250px, 1000px, 80%);
 }
 .logo-container > h1 {
   display: inline-block;
@@ -109,14 +128,16 @@ ul {
 .main-section {
   display: grid;
   grid-template-columns: 3fr minmax(300px, 350px);
-  grid-template-rows: minmax(100px, 200px) 50px 2fr;
-  background-color: #02ac1e;
+  grid-template-rows: minmax(50px, 200px) 50px 2fr;
+  background-color: #e4e4e7;
 }
 .header {
   display: grid;
   grid-template-columns: 3fr minmax(100px, 2fr);
+  grid-template-rows: 50px 1fr;
+  padding: 20px 40px;
 
-  background-color: #71771e;
+  background-color: #a7f3d0;
   grid-column: 1 / span 2;
   grid-row: 1;
 }
@@ -124,12 +145,25 @@ ul {
   grid-column: 1;
 }
 .actions-section {
+  display: flex;
   justify-content: space-around;
+}
+.actions-section > button {
+  background-color: #065f46;
+  color: #ecfdf5;
+  font-size: clamp(16px, 15ch, 20px);
+  font-weight: bold;
+  align-self: center;
+  height: 40%;
+  width: 15ch;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 12px;
 }
 .cards-container {
   grid-row: 3;
   padding: 20px;
-  background-color: #fed024;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: minmax(200px, 300px);
@@ -172,4 +206,47 @@ a {
 
 li:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+.hero-section {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: repeat(2, 50px);
+
+  font-weight: bold;
+}
+
+.hero-pfp {
+  align-self: center;
+  width: 90px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.user-at,
+.welcome {
+  margin-left: 16px;
+}
+.user-at {
+  font-size: 24px;
+}
+.user-section {
+  display: grid;
+  grid-template-columns: 50px 60px 1fr;
+  align-items: center;
+
+  gap: 20px;
+}
+.user-section > .pfp {
+  width: 60px;
+}
+.pfp,
+.user-name {
+  align-self: left;
+}
+.user-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.welcome {
+  align-self: end;
+  font-size: 18px;
 }
