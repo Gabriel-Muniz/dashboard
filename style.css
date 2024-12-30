@@ -74,7 +74,7 @@ ul {
 .body {
   width: inherit;
   height: inherit;
-  background-color: #1a1a1a;
+  background-color: #a7f3d0;
 
   display: grid;
   grid-template-columns: minmax(250px, 300px) minmax(350px, 1fr);
@@ -129,7 +129,7 @@ input {
   display: grid;
   grid-template-columns: 3fr minmax(300px, 350px);
   grid-template-rows: minmax(50px, 200px) 50px 2fr;
-  background-color: #e4e4e7;
+  background-color: #a7f3d0;
 }
 .header {
   display: grid;
@@ -137,7 +137,7 @@ input {
   grid-template-rows: 50px 1fr;
   padding: 20px 40px;
 
-  background-color: #a7f3d0;
+  background-color: #ecfdf5;
   grid-column: 1 / span 2;
   grid-row: 1;
 }
@@ -166,26 +166,31 @@ input {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-template-rows: minmax(200px, 300px);
-  grid-auto-rows: minmax(200px, 300px);
+  grid-template-rows: minmax(200px, 250px);
+  grid-auto-rows: minmax(200px, 250px);
   gap: 15px;
 
   justify-content: center;
 }
 .card {
-  background-color: purple;
+  padding: 24px;
+  background-color: #ecfdf5;
   width: 1fr;
-  max-height: 300px;
+  max-height: 250px;
+  border-radius: 12px;
 }
+
 .content-sidebar {
   padding-top: 20px;
   grid-column: 2;
   grid-row: 3;
-  background-color: #d3c0d3;
+  margin-right: 20px;
 }
+.trending-container,
 .annoucements-container {
   padding: 24px 16px;
-  background-color: #6ab21e;
+  background-color: #ecfdf5;
+  border-radius: 10px;
 }
 .trending-title {
   padding-top: 24px;
@@ -232,7 +237,7 @@ li:hover {
   display: grid;
   grid-template-columns: 50px 60px 1fr;
   align-items: center;
-
+  justify-self: center;
   gap: 20px;
 }
 .user-section > .pfp {
@@ -249,4 +254,36 @@ li:hover {
 .welcome {
   align-self: end;
   font-size: 18px;
+}
+.main-section > h1 {
+  padding: 20px;
+}
+hr {
+  border-top: #065f46 2px solid;
+  margin-bottom: 16px;
+}
+.trending-acc {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  grid-template-rows: 30px 1fr;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.trending-acc > img {
+  width: 60px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  background-color: #065f4655;
+  border-radius: 50%;
+}
+.acc-atsign {
+  font-weight: bold;
+  align-self: end;
+}
+.acc-description {
+  align-self: start;
+}
+.card > h1 {
+  line-height: 1.75rem;
+  margin-bottom: 12px;
 }
